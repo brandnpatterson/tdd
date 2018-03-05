@@ -11,10 +11,7 @@ multi.map(inner => {
     filteredMulti = [];
 
     inner.map((a, b) => {
-        if (inner.indexOf(a) === b) {
-            if (a === b) {
-                return;
-            }
+        if (inner.indexOf(a) === b && a !== b) {
             filteredMulti.push(a)
         }
     });
