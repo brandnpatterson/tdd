@@ -3,7 +3,7 @@
 
 let multi = [
     ['a', 'b', 'c', 'a'],
-    ['a', 'b', 'c', 'a']
+    ['a', 'b', 'c', 'a', 'b']
 ];
 
 let filteredMulti;
@@ -11,8 +11,10 @@ multi.map(inner => {
     filteredMulti = [];
 
     inner.map((a, b) => {
-        if (inner.indexOf(a) === b && a !== b) {
-            filteredMulti.push(a)
+        if (inner.indexOf(a) === b) {
+            if (a !== b) {
+                filteredMulti.push(a);
+            }
         }
     });
 });
